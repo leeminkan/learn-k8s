@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: 080197/hello-kube
+  tag: "latest"
+  pullPolicy: Never
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 32000
+
+env:
+  NODE_ENV: development
