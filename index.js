@@ -1,7 +1,9 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  res.end(`Hello kube from ${process.env.NODE_ENV} \n`);
+  res.end(
+    `Hello kube from ${process.env.NODE_ENV} \n SECRET_KEY: ${process.env.SECRET_KEY} \n`
+  );
 });
 
 server.listen(3000, () => {
